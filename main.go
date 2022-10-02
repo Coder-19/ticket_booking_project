@@ -12,7 +12,9 @@ func main() {
 	const conferenceTickets = 50
 
 	// creating a variable for getting the number of remaining tickets
-	var remainingTickets = 50 // initially all the tickets are remaining
+
+	// the variable type of remainingTickets is uint since remainingTickets cannot be negative
+	var remainingTickets uint = 50 // initially all the tickets are remaining
 
 	// using the Printf() method from the fmt package for printing the formatted output
 	fmt.Printf("Welcome to %v booking application\n", conferenceName) // here %v is a placeholder for conferenceName
@@ -48,7 +50,7 @@ func main() {
 	fmt.Scan(&userTickets)
 
 	// thank you message for the user
-	fmt.Printf("Thank you %v %v for booking %v tickets. You will recieve a confirmation email at %v", firstName, lastName, userTickets, email)
+	fmt.Printf("Thank you %v %v for booking %v tickets. You will recieve a confirmation email at %v\n", firstName, lastName, userTickets, email)
 
 	// initializing the value of userName and userTickets below
 	// userName = "Tom"
